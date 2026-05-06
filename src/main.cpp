@@ -30,7 +30,7 @@ const int   daylightOffset_sec = 3600; // +1h for DST
 // --- Hardware Objects ---
 Adafruit_AHTX0 aht;
 
-WiFiClient client; // Handled by MySQL_MariaDB_Generic library
+// WiFiClient client; // Handled by MySQL_MariaDB_Generic library
 
 MySQL_Connection conn((Client *)&client);
 
