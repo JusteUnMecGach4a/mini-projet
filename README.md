@@ -32,6 +32,19 @@ Exécutez le script dans `/database/schema.sql` sur votre Raspberry Pi pour cré
 Déployez vos fichiers PHP dans `/var/www/html/projet_v1/`. Le portail est accessible via :
 - `http://canova.local/` ou `http://172.17.7.4/`
 
+## ⚙️ Adaptation du Projet
+
+Pour adapter ce projet à un autre environnement, voici les paramètres à modifier :
+
+### Dans `src/main.cpp` (Code ESP32) :
+- **WiFi** : Modifier `ssid` et `password` pour correspondre à votre point d'accès.
+- **Serveur SQL** : Modifier `server` (IP de la Raspberry) et `server_port` (par défaut 13306).
+- **Identifiants** : Modifier `user` et `pwd` si vous changez les droits dans MariaDB.
+
+### Dans `database/schema.sql` (Script SQL) :
+- **Utilisateurs** : Changez les mots de passe dans les clauses `IDENTIFIED BY "votre_mdp"`.
+- **Accès Distant** : Le symbole `%` dans `"user_IoT"@"%"` permet la connexion depuis n'importe quelle IP. Pour plus de sécurité, vous pouvez le remplacer par une plage d'IP spécifique.
+
 ## 🔒 Sécurité
 - Accès au SGBD restreint via des privilèges minimaux.
 - Authentification du site Intranet via `.htaccess` (Identifiant : `admin` / Password : `btscielir`).
