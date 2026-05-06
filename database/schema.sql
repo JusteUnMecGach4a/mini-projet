@@ -35,7 +35,7 @@ CREATE USER IF NOT EXISTS "admin_projet"@"%" IDENTIFIED BY "votre_mdp_admin";
 GRANT ALL PRIVILEGES ON bay_monitoring.* TO "admin_projet"@"%";
 
 -- Site PHP (Consultation locale)
-CREATE USER IF NOT EXISTS "user_PHP"@"localhost" IDENTIFIED BY "votre_mdp_php";
+CREATE USER IF NOT EXISTS "user_PHP"@"localhost" IDENTIFIED BY "php_pwd_4";
 GRANT SELECT ON bay_monitoring.* TO "user_PHP"@"localhost";
 
 -- Nœuds IoT (Insertion des mesures)

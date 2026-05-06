@@ -16,6 +16,7 @@ Ce projet est un système de surveillance environnementale pour 4 baies serveurs
 - `src/main.cpp` : Code source C++ pour l'ESP32 (Lecture capteur, WiFi, Client SQL).
 - `include/` : Entêtes C++ (Synchronisation temporelle SNTP).
 - `database/` : Scripts SQL et documentation de la base de données `bay_monitoring`.
+- `supervisor/` : Interface Web PHP (CORE_SUPERVISOR v10.0) avec alertes Telegram et Mail.
 - `platformio.ini` : Configuration de l'environnement de développement PlatformIO.
 
 ## 🛠️ Installation et Configuration
