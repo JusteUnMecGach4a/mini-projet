@@ -15,7 +15,7 @@ const char* password = "";
 // --- Database Credentials ---
 char user[] = "user_IoT";
 char pwd[]  = "iot_pwd_4";
-IPAddress server(172, 17, 7, 4);
+char server[] = "CANOVA.local";
 uint16_t server_port = 13306;
 
 // --- Database Name and Query ---

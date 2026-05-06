@@ -27,7 +27,7 @@ Exécutez le script dans `/database/schema.sql` sur votre Raspberry Pi pour cré
 ### 2. Firmware ESP32
 1. Ouvrez le projet avec VS Code et l'extension **PlatformIO**.
 2. Configurez vos identifiants WiFi (`ssid`, `password`) dans `src/main.cpp`.
-3. Vérifiez l'adresse IP de votre Raspberry Pi (ex: `172.17.7.4`).
+3. Vérifiez le nom d'hôte de votre Raspberry Pi (ex: `CANOVA.local`).
 4. Compilez et uploadez le code sur l'ESP32.
 
 ### 3. Site Intranet
@@ -41,7 +41,7 @@ Pour adapter ce projet à un autre environnement, voici les paramètres à modif
 
 ### Dans `src/main.cpp` (Code ESP32) :
 - **WiFi** : Modifier `ssid` et `password` pour correspondre à votre point d'accès.
-- **Serveur SQL** : Modifier `server` (IP de la Raspberry) et `server_port` (par défaut 13306).
+- **Serveur SQL** : Modifier `server` (Hostname de la Raspberry, ex: `CANOVA.local`) et `server_port` (par défaut 13306).
 - **Identifiants** : Modifier `user` et `pwd` si vous changez les droits dans MariaDB.
 
 ### Dans `database/schema.sql` (Script SQL) :
