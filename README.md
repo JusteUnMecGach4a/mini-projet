@@ -6,8 +6,9 @@ Ce projet est un système de surveillance environnementale pour 4 baies serveurs
 
 - **Microcontrôleur** : NodeMCU ESP32.
 - **Capteurs** : AHT20 (Température & Humidité) via interface I2C (Pins 21/22).
-- **Serveur Central** : Raspberry Pi 400 (GNU/Linux).
+- **Serveur Central** : Raspberry Pi (GNU/Linux).
 - **Base de Données** : MariaDB (SGBD Relationnel) sur le port 13306.
+
 - **Serveur Web** : Apache2 avec PHP8.
 
 ## 📁 Structure du Projet
@@ -25,12 +26,13 @@ Exécutez le script dans `/database/schema.sql` sur votre Raspberry Pi pour cré
 ### 2. Firmware ESP32
 1. Ouvrez le projet avec VS Code et l'extension **PlatformIO**.
 2. Configurez vos identifiants WiFi (`ssid`, `password`) dans `src/main.cpp`.
-3. Vérifiez l'adresse IP de votre Raspberry Pi (défaut : `172.17.7.4`).
+3. Vérifiez l'adresse IP de votre Raspberry Pi (ex: `172.17.7.4`).
 4. Compilez et uploadez le code sur l'ESP32.
 
 ### 3. Site Intranet
-Déployez vos fichiers PHP dans `/var/www/html/projet_v1/`. Le portail est accessible via :
-- `http://canova.local/` ou `http://172.17.7.4/`
+Déployez vos fichiers PHP dans le répertoire racine de votre serveur Web (ex: `/var/www/html/projet_v1/`). Le portail est accessible via l'adresse IP de votre serveur ou son hostname local :
+- `http://<IP_DE_VOTRE_RASPBERRY>/` ou `http://<VOTRE_HOSTNAME>.local/`
+
 
 ## ⚙️ Adaptation du Projet
 
